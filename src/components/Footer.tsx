@@ -1,5 +1,21 @@
-import { Facebook, Twitter, LinkedIn, Instagram, YouTube } from '@mui/icons-material'
-import { IconButton, Box, Stack, Typography, Button,  TextField, ImageList, ImageListItem, Tooltip } from '@mui/material'
+import {
+  Facebook,
+  Twitter,
+  LinkedIn,
+  Instagram,
+  YouTube,
+} from "@mui/icons-material";
+import {
+  IconButton,
+  Box,
+  Stack,
+  Typography,
+  Button,
+  TextField,
+  ImageList,
+  ImageListItem,
+  Tooltip,
+} from "@mui/material";
 import { IoIosSend } from "react-icons/io";
 import { SiWorldhealthorganization } from "react-icons/si";
 import { FaGreaterThan } from "react-icons/fa";
@@ -12,167 +28,321 @@ import { FaApplePay } from "react-icons/fa";
 import { FaCcMastercard } from "react-icons/fa6";
 import { CiCreditCard2 } from "react-icons/ci";
 
-
 export const Footer = () => {
   return (
-    <Stack >
-      <Stack direction="row" sx={{paddingBlock:5, gap:6, alignItems:'center', justifyContent:'center', textTransform:'capitalize', borderBottom:'1px solid gray', alignSelf:'center'}}>
-        <Stack sx={{maxWidth:'33%'}}>
-          <Typography variant="h4" sx={{fontFamily:'"Marck Script", cursive', fontWeight:500, color:'secondary.main'}}> Get updated with the lastest newsletter</Typography>
+    <Stack>
+      <Stack
+        direction="row"
+        sx={{
+          paddingBlock: 5,
+          gap: 6,
+          alignItems: "center",
+          justifyContent: "center",
+          textTransform: "capitalize",
+          borderBottom: "1px solid gray",
+          alignSelf: "center",
+        }}
+      >
+        <Stack sx={{ maxWidth: "33%" }}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: '"Marck Script", cursive',
+              fontWeight: 500,
+              color: "secondary.main",
+            }}
+          >
+            {" "}
+            Get updated with the lastest newsletter
+          </Typography>
         </Stack>
-        <Stack direction="row" sx={{gap:3}}>
-          <TextField id="outlined-basic" label="Enter Email" variant="outlined" sx={{bgcolor:'#1a1a1a', borderRadius:3}}/>
-          <Button variant='outlined' endIcon={< IoIosSend />} sx={{fontSize:19}} > Subscribe now</Button>
+        <Stack direction="row" sx={{ gap: 3 }}>
+          <TextField
+            id="outlined-basic"
+            label="Enter Email"
+            variant="outlined"
+            sx={{ bgcolor: "#1a1a1a", borderRadius: 3 }}
+          />
+          <Button
+            variant="outlined"
+            endIcon={<IoIosSend />}
+            sx={{ fontSize: 19 }}
+          >
+            {" "}
+            Subscribe now
+          </Button>
         </Stack>
       </Stack>
-      <Stack direction="row" sx={{ justifyContent:'space-evenly', gap:2, paddingBlock:5}}>
-        <Stack sx={{maxWidth:'25%'}}>
-          <Stack direction="row" sx={{alignItems:'center'}}>
-            <IconButton color='primary' sx={{ fontSize: 100}} > <SiWorldhealthorganization/></IconButton>
+      <Stack
+        direction="row"
+        sx={{ justifyContent: "space-evenly", gap: 2, paddingBlock: 5 }}
+      >
+        <Stack sx={{ maxWidth: "25%" }}>
+          <Stack direction="row" sx={{ alignItems: "center" }}>
+            <IconButton color="primary" sx={{ fontSize: 100 }}>
+              {" "}
+              <SiWorldhealthorganization />
+            </IconButton>
             <Box>
-              <Typography variant='h4' sx={{fontFamily:'"UoqMunThenKhung", serif', color:'primary.main'}}>Zaph Tours</Typography>
-              <Typography variant='h6' >Explore the world.</Typography>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontFamily: '"UoqMunThenKhung", serif',
+                  color: "primary.main",
+                }}
+              >
+                Zaph Tours
+              </Typography>
+              <Typography variant="h6">Explore the world.</Typography>
             </Box>
           </Stack>
-          <Stack >
-            <Typography sx={{color:'text.secondary', mt:1}}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et officia eligendi consequuntur, temporibus laborum illo animi eveniet id dicta laboriosam aut totam unde dolorum veniam? Officia rem natus ducimus unde!
+          <Stack>
+            <Typography sx={{ color: "text.secondary", mt: 1 }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
+              officia eligendi consequuntur, temporibus laborum illo animi
+              eveniet id dicta laboriosam aut totam unde dolorum veniam? Officia
+              rem natus ducimus unde!
             </Typography>
           </Stack>
-          <Box sx={{ mt: 2, display: 'flex', gap:2}}>
-            <IconButton size="small"><Instagram fontSize="large" sx={{color:'primary.main'}}/></IconButton>
-            <IconButton size="small"><Facebook fontSize="large" sx={{color:'primary.main'}} /></IconButton>
-            <IconButton size="small"><LinkedIn fontSize="large" sx={{color:'primary.main'}} /></IconButton>
-            <IconButton size="small"><Twitter fontSize="large" sx={{color:'primary.main'}} /></IconButton>
-            <IconButton size="small"><YouTube fontSize="large" sx={{color:'primary.main'}} /></IconButton>
-          </Box> 
+          <Box sx={{ mt: 2, display: "flex", gap: 2 }}>
+            <IconButton size="small">
+              <Instagram fontSize="large" sx={{ color: "primary.main" }} />
+            </IconButton>
+            <IconButton size="small">
+              <Facebook fontSize="large" sx={{ color: "primary.main" }} />
+            </IconButton>
+            <IconButton size="small">
+              <LinkedIn fontSize="large" sx={{ color: "primary.main" }} />
+            </IconButton>
+            <IconButton size="small">
+              <Twitter fontSize="large" sx={{ color: "primary.main" }} />
+            </IconButton>
+            <IconButton size="small">
+              <YouTube fontSize="large" sx={{ color: "primary.main" }} />
+            </IconButton>
+          </Box>
         </Stack>
-        <Stack sx={{alignItems:'center'}}>
-          <Typography variant='h6' sx={{color:'primary.main', fontWeight:600, mb:2, fontFamily:'"UoqMunThenKhung", serif'}}> Useful Links</Typography>
-          <Stack sx={{alignItems:'flex-start'}}>
-            <Button variant='text' startIcon={<FaGreaterThan/>} sx={{color:'text.secondary'}}>Home</Button>
-            <Button variant='text' startIcon={<FaGreaterThan/>} sx={{color:'text.secondary'}}>Destinations</Button>
-            <Button variant='text' startIcon={<FaGreaterThan/>} sx={{color:'text.secondary'}}>Trip types</Button>
-            <Button variant='text' startIcon={<FaGreaterThan/>} sx={{color:'text.secondary'}}>Contact us</Button>
-            <Button variant='text' startIcon={<FaGreaterThan/>} sx={{color:'text.secondary'}}>About us</Button>
-            <Button variant='text' startIcon={<FaGreaterThan/>} sx={{color:'text.secondary'}}>Testimonials</Button>
+        <Stack sx={{ alignItems: "center" }}>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "primary.main",
+              fontWeight: 600,
+              mb: 2,
+              fontFamily: '"UoqMunThenKhung", serif',
+            }}
+          >
+            {" "}
+            Useful Links
+          </Typography>
+          <Stack sx={{ alignItems: "flex-start" }}>
+            <Button
+              variant="text"
+              startIcon={<FaGreaterThan />}
+              sx={{ color: "text.secondary" }}
+            >
+              Home
+            </Button>
+            <Button
+              variant="text"
+              startIcon={<FaGreaterThan />}
+              sx={{ color: "text.secondary" }}
+            >
+              Destinations
+            </Button>
+            <Button
+              variant="text"
+              startIcon={<FaGreaterThan />}
+              sx={{ color: "text.secondary" }}
+            >
+              Trip types
+            </Button>
+            <Button
+              variant="text"
+              startIcon={<FaGreaterThan />}
+              sx={{ color: "text.secondary" }}
+            >
+              Contact us
+            </Button>
+            <Button
+              variant="text"
+              startIcon={<FaGreaterThan />}
+              sx={{ color: "text.secondary" }}
+            >
+              About us
+            </Button>
+            <Button
+              variant="text"
+              startIcon={<FaGreaterThan />}
+              sx={{ color: "text.secondary" }}
+            >
+              Testimonials
+            </Button>
           </Stack>
         </Stack>
-        <Stack sx={{gap:1}}>
-          <Typography variant='h6' sx={{color:'primary.main', fontWeight:600, mb:2, textAlign:'left', fontFamily:'"UoqMunThenKhung", serif'}}> Get In Touch</Typography>
+        <Stack sx={{ gap: 1 }}>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "primary.main",
+              fontWeight: 600,
+              mb: 2,
+              textAlign: "left",
+              fontFamily: '"UoqMunThenKhung", serif',
+            }}
+          >
+            {" "}
+            Get In Touch
+          </Typography>
           <Stack direction="row">
             <Stack>
-              <IconButton size='large' sx={{color:'primary.main', fontSize:30}}> <FaPhoneVolume   /></IconButton>
+              <IconButton
+                size="large"
+                sx={{ color: "primary.main", fontSize: 30 }}
+              >
+                {" "}
+                <FaPhoneVolume />
+              </IconButton>
             </Stack>
-            <Stack sx={{color:'text.secondary'}}>
+            <Stack sx={{ color: "text.secondary" }}>
               <Typography>+2547 345 6787</Typography>
               <Typography>+2547 071 3358</Typography>
             </Stack>
           </Stack>
           <Stack direction="row">
             <Stack>
-              <IconButton size='large' sx={{color:'primary.main', fontSize:30}}> <IoMail/></IconButton>
+              <IconButton
+                size="large"
+                sx={{ color: "primary.main", fontSize: 30 }}
+              >
+                {" "}
+                <IoMail />
+              </IconButton>
             </Stack>
-            <Stack sx={{color:'text.secondary'}}>
+            <Stack sx={{ color: "text.secondary" }}>
               <Typography>mailinfo@dev.com</Typography>
               <Typography>devcharles@dev.com</Typography>
             </Stack>
           </Stack>
           <Stack direction="row">
             <Stack>
-              <IconButton size='large' sx={{color:'primary.main', fontSize:30}}> <FaLocationDot /></IconButton>
+              <IconButton
+                size="large"
+                sx={{ color: "primary.main", fontSize: 30 }}
+              >
+                {" "}
+                <FaLocationDot />
+              </IconButton>
             </Stack>
-            <Stack sx={{color:'text.secondary'}}>
+            <Stack sx={{ color: "text.secondary" }}>
               <Typography>789 Inner Lane, Holy Park, </Typography>
               <Typography>California, USA</Typography>
             </Stack>
           </Stack>
         </Stack>
         <Stack>
-          <Typography variant='h6' sx={{color:'primary.main', fontWeight:600, mb:2, fontFamily:'"UoqMunThenKhung", serif'}}>Instagram Posts</Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "primary.main",
+              fontWeight: 600,
+              mb: 2,
+              fontFamily: '"UoqMunThenKhung", serif',
+            }}
+          >
+            Instagram Posts
+          </Typography>
           <Stack>
-            <ImageList sx={{ width: 300, height: 260, }} >
+            <ImageList sx={{ width: 300, height: 260 }}>
               {itemData.map((item) => (
-                <ImageListItem sx={{ height:70}}>
-                  <img
-                    src={`${item.img}`}
-                    loading="lazy"
-                  />
+                <ImageListItem sx={{ height: 70 }}>
+                  <img src={`${item.img}`} loading="lazy" />
                 </ImageListItem>
               ))}
             </ImageList>
           </Stack>
         </Stack>
       </Stack>
-      <Stack direction="row" sx={{paddingBlock:2, paddingInline:7, justifyContent:'space-evenly', alignItems: 'center', bgcolor:'background.paper' }}>
-        <Typography> Copyright © 2025 dev Charles, All rights reserved </Typography>
-        <Stack direction="row" sx={{ gap: 2, alignItems: 'center' }}>
+      <Stack
+        direction="row"
+        sx={{
+          paddingBlock: 2,
+          paddingInline: 7,
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          bgcolor: "background.paper",
+        }}
+      >
+        <Typography>
+          {" "}
+          Copyright © 2025 dev Charles, All rights reserved{" "}
+        </Typography>
+        <Stack direction="row" sx={{ gap: 2, alignItems: "center" }}>
           <Typography sx={{}}>We Accept</Typography>
 
           <Tooltip title="Visa">
-            <IconButton sx={{ color: 'primary.main', fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
               <FaCcVisa />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="PayPal">
-            <IconButton sx={{ color: 'primary.main', fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
               <FaCcPaypal />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="Credit Card">
-            <IconButton sx={{ color: 'primary.main', fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
               <CiCreditCard2 />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="MasterCard">
-            <IconButton sx={{ color: 'primary.main', fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
               <FaCcMastercard />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="Apple Pay">
-            <IconButton sx={{ color: 'primary.main', fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
               <FaApplePay />
             </IconButton>
           </Tooltip>
         </Stack>
       </Stack>
     </Stack>
-  )
-}
-
+  );
+};
 
 type Item = {
-    img: String,
-    title: String
-  }
+  img: String;
+  title: String;
+};
 
-const itemData:Item[] = [
+const itemData: Item[] = [
   {
-    img: '/images/instaPost1.jpeg',
-    title: 'instagram post 1'
+    img: "/images/instaPost1.jpeg",
+    title: "instagram post 1",
   },
   {
-    img: '/images/instapost2.png',
-    title: 'instagram post 2'
+    img: "/images/instapost2.png",
+    title: "instagram post 2",
   },
   {
-    img: '/images/instapost6.png',
-    title: 'instagram post 3'
+    img: "/images/instapost6.png",
+    title: "instagram post 3",
   },
   {
-    img: '/images/instapost4.png',
-    title: 'instagram post 4'
+    img: "/images/instapost4.png",
+    title: "instagram post 4",
   },
   {
-    img: '/images/instapost5.png',
-    title: 'instagram post 5'
+    img: "/images/instapost5.png",
+    title: "instagram post 5",
   },
   {
-    img: '/images/instapost3.png',
-    title: 'instagram post 6'
-  }
-]
+    img: "/images/instapost3.png",
+    title: "instagram post 6",
+  },
+];

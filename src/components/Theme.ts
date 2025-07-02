@@ -1,21 +1,21 @@
 // theme.ts
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 export const Theme = createTheme({
   palette: {
     primary: {
-      main: '#00b4d8',
+      main: "#00b4d8",
     },
     secondary: {
-      main: '#ffd166', 
+      main: "#ffd166",
     },
     background: {
-      default: '#0a0a0a', 
-      paper: '#1a1a1a',   
+      default: "#0a0a0a",
+      paper: "#1a1a1a",
     },
     text: {
-      primary: '#f5f5f5',
-      secondary: '#a3a3a3'
+      primary: "#f5f5f5",
+      secondary: "#a3a3a3",
     },
   },
   components: {
@@ -23,11 +23,11 @@ export const Theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 12,
-          textTransform: 'capitalize',
+          textTransform: "capitalize",
           fontWeight: 600,
-          padding: '8px 24px',
+          padding: "8px 24px",
         },
       },
-    }
+    },
   },
 });
