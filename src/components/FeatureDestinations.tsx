@@ -77,7 +77,7 @@ export const FeaturedDestinations = () => {
   return (
     <Stack
       sx={{
-        marginBlock: 10,
+        mt: 10,
         backgroundColor: "background.paper",
         paddingBlock: 5,
       }}
