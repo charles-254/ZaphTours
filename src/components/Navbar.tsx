@@ -26,7 +26,7 @@ export const Navbar = () => (
           fontSize: 17,
         }}
       >
-        <Link href="home" underline="hover" sx={{ color: "whitesmoke" }}>
+        <Link href="/" underline="hover" sx={{ color: "whitesmoke" }}>
           Home
         </Link>
         <Link

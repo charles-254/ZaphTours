@@ -41,7 +41,7 @@ export const Hero = () => {
             p: 1,
           }}
         >
-          Get unforgetabble pleasure with us.
+          Get unforgetable pleasure with us.
         </Typography>
         <Typography
           variant="h1"
@@ -64,7 +64,7 @@ export const Hero = () => {
             pointerEvents: "auto",
           }}
         >
-          No Just Trips.
+          Not Just Trips.
         </Typography>
         <Box sx={{ display: "flex", gap: 2, mt: 2, pointerEvents: "auto" }}>
           <Button

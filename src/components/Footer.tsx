@@ -1,9 +1,10 @@
 import {
   Facebook,
-  Twitter,
   LinkedIn,
   Instagram,
   YouTube,
+  WhatsApp,
+  X,
 } from "@mui/icons-material";
 import {
   IconButton,
@@ -34,7 +35,7 @@ export const Footer = () => {
       <Stack
         direction="row"
         sx={{
-          paddingBlock: 5,
+          paddingBlock: 10,
           gap: 6,
           alignItems: "center",
           justifyContent: "center",
@@ -58,7 +59,6 @@ export const Footer = () => {
         </Stack>
         <Stack direction="row" sx={{ gap: 3 }}>
           <TextField
-            id="outlined-basic"
             label="Enter Email"
             variant="outlined"
             sx={{ bgcolor: "#1a1a1a", borderRadius: 3 }}
@@ -66,7 +66,7 @@ export const Footer = () => {
           <Button
             variant="outlined"
             endIcon={<IoIosSend />}
-            sx={{ fontSize: 19 }}
+            sx={{ fontSize: 15 }}
           >
             {" "}
             Subscribe now
@@ -75,7 +75,7 @@ export const Footer = () => {
       </Stack>
       <Stack
         direction="row"
-        sx={{ justifyContent: "space-evenly", gap: 2, paddingBlock: 5 }}
+        sx={{ justifyContent: "space-evenly", gap: 2, paddingBlock: 10 }}
       >
         <Stack sx={{ maxWidth: "25%" }}>
           <Stack direction="row" sx={{ alignItems: "center" }}>
@@ -106,25 +106,24 @@ export const Footer = () => {
           </Stack>
           <Box sx={{ mt: 2, display: "flex", gap: 2 }}>
             <IconButton size="small">
-              <Instagram fontSize="large" sx={{ color: "primary.main" }} />
+              <Instagram fontSize="medium" sx={{ color: "primary.main" }} />
             </IconButton>
             <IconButton size="small">
-              <Facebook fontSize="large" sx={{ color: "primary.main" }} />
+              <Facebook fontSize="medium" sx={{ color: "primary.main" }} />
             </IconButton>
             <IconButton size="small">
-              <LinkedIn fontSize="large" sx={{ color: "primary.main" }} />
+              <LinkedIn fontSize="medium" sx={{ color: "primary.main" }} />
             </IconButton>
             <IconButton size="small">
-              <Twitter fontSize="large" sx={{ color: "primary.main" }} />
+              <X fontSize="medium" sx={{ color: "primary.main" }} />
             </IconButton>
             <IconButton size="small">
-              <YouTube fontSize="large" sx={{ color: "primary.main" }} />
+              <YouTube fontSize="medium" sx={{ color: "primary.main" }} />
             </IconButton>
           </Box>
         </Stack>
         <Stack sx={{ alignItems: "center" }}>
           <Typography
-            variant="h6"
             sx={{
               color: "primary.main",
               fontWeight: 600,
@@ -180,9 +179,8 @@ export const Footer = () => {
             </Button>
           </Stack>
         </Stack>
-        <Stack sx={{ gap: 1 }}>
+        <Stack sx={{ gap: 1.5 }}>
           <Typography
-            variant="h6"
             sx={{
               color: "primary.main",
               fontWeight: 600,
@@ -198,7 +196,7 @@ export const Footer = () => {
             <Stack>
               <IconButton
                 size="large"
-                sx={{ color: "primary.main", fontSize: 30 }}
+                sx={{ color: "primary.main", fontSize: 25 }}
               >
                 {" "}
                 <FaPhoneVolume />
@@ -213,7 +211,22 @@ export const Footer = () => {
             <Stack>
               <IconButton
                 size="large"
-                sx={{ color: "primary.main", fontSize: 30 }}
+                sx={{ color: "primary.main", fontSize: 25 }}
+              >
+                {" "}
+                <WhatsApp />
+              </IconButton>
+            </Stack>
+            <Stack sx={{ color: "text.secondary" }}>
+              <Typography>+2547 345 6787</Typography>
+              <Typography>+2547 071 3358</Typography>
+            </Stack>
+          </Stack>
+          <Stack direction="row">
+            <Stack>
+              <IconButton
+                size="large"
+                sx={{ color: "primary.main", fontSize: 25 }}
               >
                 {" "}
                 <IoMail />
@@ -228,7 +241,7 @@ export const Footer = () => {
             <Stack>
               <IconButton
                 size="large"
-                sx={{ color: "primary.main", fontSize: 30 }}
+                sx={{ color: "primary.main", fontSize: 25 }}
               >
                 {" "}
                 <FaLocationDot />
@@ -242,7 +255,6 @@ export const Footer = () => {
         </Stack>
         <Stack>
           <Typography
-            variant="h6"
             sx={{
               color: "primary.main",
               fontWeight: 600,
@@ -281,13 +293,13 @@ export const Footer = () => {
           <Typography sx={{}}>We Accept</Typography>
 
           <Tooltip title="Visa">
-            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 30 }}>
               <FaCcVisa />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="PayPal">
-            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 30 }}>
               <FaCcPaypal />
             </IconButton>
           </Tooltip>
@@ -299,13 +311,13 @@ export const Footer = () => {
           </Tooltip>
 
           <Tooltip title="MasterCard">
-            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 30 }}>
               <FaCcMastercard />
             </IconButton>
           </Tooltip>
 
           <Tooltip title="Apple Pay">
-            <IconButton sx={{ color: "primary.main", fontSize: 40 }}>
+            <IconButton sx={{ color: "primary.main", fontSize: 30 }}>
               <FaApplePay />
             </IconButton>
           </Tooltip>

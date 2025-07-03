@@ -13,7 +13,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export const NewsLetter = () => {
   return (
-    <Stack sx={{paddingBlock:8, backgroundColor: "background.paper"}}>
+    <Stack sx={{ paddingBlock: 8, backgroundColor: "background.paper" }}>
       <Stack
         direction="row"
         sx={{
@@ -57,7 +57,10 @@ export const NewsLetter = () => {
       </Stack>
       <Stack direction="row" sx={{ gap: 4, justifyContent: "center", mt: 4 }}>
         {Articles.map((article, index) => (
-          <Card sx={{ maxWidth: 345, backgroundColor: "#0a0a0ad4"}} key={index}>
+          <Card
+            sx={{ maxWidth: 345, backgroundColor: "#0a0a0ad4" }}
+            key={index}
+          >
             <CardMedia
               component="img"
               alt="article image"

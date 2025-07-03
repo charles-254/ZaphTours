@@ -125,12 +125,18 @@ export const FeaturedDestinations = () => {
         }}
       >
         {featuredDestinations.map((destination, index) => (
-          <Box key={index} sx={{ width: 345 }}>
-            <Card sx={{ backgroundColor: "#0a0a0ad4" }}>
+          <Box key={index}>
+            <Card
+              sx={{
+                backgroundColor: "#0a0a0ad4",
+                width: 400,
+                borderRadius: "10px",
+              }}
+            >
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="260"
                   image={destination.img}
                   alt={destination.title}
                 />
