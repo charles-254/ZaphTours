@@ -1,7 +1,15 @@
-import { Typography } from "@mui/material";
+import { ContactUsLanding } from "../components/ContactUsLanding";
+import ContactUsSection from "../components/ContactUsSection";
+import { Footer } from "../components/Footer";
 
 function ContactUs() {
-  return <Typography> Contact us</Typography>;
+  return (
+    <>
+      <ContactUsLanding />
+      <ContactUsSection />
+      <Footer />
+    </>
+  );
 }
 
 export default ContactUs;

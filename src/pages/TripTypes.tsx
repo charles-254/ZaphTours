@@ -1,7 +1,13 @@
-import { Typography } from "@mui/material";
+import { Footer } from "../components/Footer";
+import TripTypesList from "../components/TripTypesListing";
 
 function TripTypes() {
-  return <Typography>Trip Types go here </Typography>;
+  return (
+    <>
+      <TripTypesList />
+      <Footer />
+    </>
+  );
 }
 
 export default TripTypes;

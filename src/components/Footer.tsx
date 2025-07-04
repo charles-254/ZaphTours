@@ -137,42 +137,46 @@ export const Footer = () => {
           <Stack sx={{ alignItems: "flex-start" }}>
             <Button
               variant="text"
-              startIcon={<FaGreaterThan />}
+              startIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               sx={{ color: "text.secondary" }}
+              href="/"
             >
               Home
             </Button>
             <Button
               variant="text"
-              startIcon={<FaGreaterThan />}
+              startIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               sx={{ color: "text.secondary" }}
+              href="/destinations"
             >
               Destinations
             </Button>
             <Button
               variant="text"
-              startIcon={<FaGreaterThan />}
+              startIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               sx={{ color: "text.secondary" }}
+              href="/trip-types"
             >
               Trip types
             </Button>
             <Button
               variant="text"
-              startIcon={<FaGreaterThan />}
+              startIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               sx={{ color: "text.secondary" }}
+              href="/contact-us"
             >
               Contact us
             </Button>
             <Button
               variant="text"
-              startIcon={<FaGreaterThan />}
+              startIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               sx={{ color: "text.secondary" }}
             >
               About us
             </Button>
             <Button
               variant="text"
-              startIcon={<FaGreaterThan />}
+              startIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               sx={{ color: "text.secondary" }}
             >
               Testimonials
@@ -233,8 +237,8 @@ export const Footer = () => {
               </IconButton>
             </Stack>
             <Stack sx={{ color: "text.secondary" }}>
-              <Typography>mailinfo@dev.com</Typography>
-              <Typography>devcharles@dev.com</Typography>
+              <Typography>mailinfo@zaph.com</Typography>
+              <Typography>zaphtours@zaph.com</Typography>
             </Stack>
           </Stack>
           <Stack direction="row">
@@ -248,8 +252,8 @@ export const Footer = () => {
               </IconButton>
             </Stack>
             <Stack sx={{ color: "text.secondary" }}>
-              <Typography>789 Inner Lane, Holy Park, </Typography>
-              <Typography>California, USA</Typography>
+              <Typography>273 Safari Lane, Holy Park, </Typography>
+              <Typography>Nairobi, Kenya</Typography>
             </Stack>
           </Stack>
         </Stack>
@@ -287,7 +291,7 @@ export const Footer = () => {
       >
         <Typography>
           {" "}
-          Copyright © 2025 dev Charles, All rights reserved{" "}
+          Copyright © 2025 Zaph Tours, All rights reserved{" "}
         </Typography>
         <Stack direction="row" sx={{ gap: 2, alignItems: "center" }}>
           <Typography sx={{}}>We Accept</Typography>

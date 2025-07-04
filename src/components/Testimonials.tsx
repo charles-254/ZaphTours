@@ -10,6 +10,7 @@ import {
   CardActionArea,
 } from "@mui/material";
 import { Facebook, X, LinkedIn, Instagram, Star } from "@mui/icons-material";
+import testimonialsData from "../data/testimonial";
 
 export const Testimonials = () => {
   return (
@@ -143,47 +144,3 @@ export const Testimonials = () => {
     </Stack>
   );
 };
-// imag should be in avatar,
-interface Testimonial {
-  img: string;
-  name: string;
-}
-
-const testimonialsData: Testimonial[] = [
-  {
-    img: "/images/testimonial1.png",
-    name: "Ethan Carter",
-  },
-  {
-    img: "/images/testimonial6.png",
-    name: "Sophia Kimani",
-  },
-  {
-    img: "/images/staff6.png",
-    name: "Aisha Mwende",
-  },
-  {
-    img: "/images/testimonial3.png",
-    name: "Daniel Brooks",
-  },
-  {
-    img: "/images/testimonial4.png",
-    name: "Grace Thompson",
-  },
-  {
-    img: "/images/testimonial2.png",
-    name: "Malik Otieno",
-  },
-  {
-    img: "/images/staff4.png",
-    name: "Sophia Kimani",
-  },
-  {
-    img: "/images/staff5.png",
-    name: "Everlyn Hugo",
-  },
-  {
-    img: "/images/staff2.png",
-    name: "Daniel Brooks",
-  },
-];

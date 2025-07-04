@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { Theme } from "./components/Theme";
+
 import Home from "./pages/Home";
 import Destinations from "./pages/Destinations";
 import ContactUs from "./pages/ContactUs";

@@ -48,6 +48,7 @@ export const Navbar = () => (
           endIcon={<FaArrowRightLong />}
           variant="outlined"
           sx={{ paddingInline: 2, fontWeight: 600 }}
+          href="/contact-us"
         >
           {" "}
           Book Now

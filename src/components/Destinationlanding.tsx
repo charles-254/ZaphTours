@@ -7,6 +7,7 @@ import {
   Button,
 } from "@mui/material";
 import { Navbar } from "./Navbar";
+import { Search } from "@mui/icons-material";
 
 export const DestinationLanding = () => {
   return (
@@ -55,11 +56,21 @@ export const DestinationLanding = () => {
             label="Search"
             variant="outlined"
             fullWidth
-            sx={{ pointerEvents: "auto" }}
+            sx={{
+              pointerEvents: "auto",
+              bgcolor: "#1717178a",
+              borderRadius: 3,
+            }}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <Button variant="contained">Go</Button>
+                  <Button
+                    variant="contained"
+                    endIcon={<Search />}
+                    sx={{ alignItems: "center" }}
+                  >
+                    Go
+                  </Button>
                 </InputAdornment>
               ),
             }}
