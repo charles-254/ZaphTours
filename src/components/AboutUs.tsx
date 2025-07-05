@@ -3,7 +3,7 @@ import { FaRegHandshake } from "react-icons/fa";
 
 export const AboutUs = () => {
   return (
-    <Stack sx={{ m: 7 }}>
+    <Stack sx={{ m: { md: 7, sm: 5, xm: 2 } }}>
       <Typography
         variant="h1"
         sx={{
@@ -11,17 +11,32 @@ export const AboutUs = () => {
           fontWeight: 500,
           color: "secondary.main",
           alignSelf: "center",
+          fontSize: {
+            md: "95px",
+            sm: "80px",
+            xs: "60px",
+          },
         }}
       >
         {" "}
         About Us
       </Typography>
+
       <Stack
-        direction="row"
-        sx={{ justifyContent: "space-evenly", marginBlock: 7 }}
+        direction={{
+          md: "row",
+          xs: "column",
+        }}
+        spacing={2}
+        sx={{ justifyContent: "space-evenly", marginBlock: 7, px: 1 }}
       >
         <Box
-          sx={{ width: 500, height: 500, overflow: "hidden", borderRadius: 2 }}
+          sx={{
+            width: { sm: 500, xs: "100%" },
+            height: 500,
+            overflow: "hidden",
+            borderRadius: 2,
+          }}
         >
           <img
             src="/images/aboutus.png"
@@ -31,7 +46,10 @@ export const AboutUs = () => {
         </Box>
         <Stack
           sx={{
-            maxWidth: "50%",
+            maxWidth: {
+              md: "50%",
+              xs: "100%",
+            },
             alignItems: "flex-start",
             display: "flex",
             justifyContent: "center",
@@ -39,7 +57,14 @@ export const AboutUs = () => {
         >
           <Typography
             variant="h5"
-            sx={{ textTransform: "uppercase", color: "text.secondary" }}
+            sx={{
+              textTransform: "uppercase",
+              color: "text.secondary",
+              fontSize: {
+                sm: "24px",
+                xs: "19px",
+              },
+            }}
           >
             About Us
           </Typography>
@@ -49,6 +74,10 @@ export const AboutUs = () => {
               fontFamily: '"UoqMunThenKhung", serif',
               mb: 2,
               textTransform: "capitalize",
+              fontSize: {
+                sm: "45px",
+                xs: "35px",
+              },
             }}
           >
             We always make the best.
@@ -72,24 +101,42 @@ export const AboutUs = () => {
           </Button>
         </Stack>
       </Stack>
-      <Stack direction="row" sx={{ justifyContent: "space-evenly" }}>
-        <Stack sx={{ maxWidth: "50%" }}>
-          <Typography
-            variant="h3"
-            sx={{
-              fontFamily: '"UoqMunThenKhung", serif',
-              mb: 2,
-              textTransform: "capitalize",
-            }}
-          >
-            Our skills
-          </Typography>
-          <Typography sx={{ color: "text.secondary", mb: 2 }}>
-            {" "}
-            At Zaph Tours, we specialize in custom travel experiences, blending
-            local expertise with adventure coordination, safe logistics, and
-            outstanding customer care to ensure every trip is unforgettable.
-          </Typography>
+      <Stack
+        direction={{ sm: "row", xm: "column" }}
+        sx={{ justifyContent: "space-evenly", px: 1 }}
+        spacing={2}
+      >
+        <Stack
+          sx={{
+            maxWidth: {
+              sm: "50%",
+              xs: "100%",
+            },
+          }}
+        >
+          <Stack>
+            <Typography
+              variant="h3"
+              sx={{
+                fontFamily: '"UoqMunThenKhung", serif',
+                mb: 2,
+                textTransform: "capitalize",
+                fontSize: {
+                  sm: "45px",
+                  xs: "35px",
+                },
+              }}
+            >
+              Our skills
+            </Typography>
+            <Typography sx={{ color: "text.secondary", mb: 2 }}>
+              {" "}
+              At Zaph Tours, we specialize in custom travel experiences,
+              blending local expertise with adventure coordination, safe
+              logistics, and outstanding customer care to ensure every trip is
+              unforgettable.
+            </Typography>
+          </Stack>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
             <Chip
               label="Eco-Friendly Adventures"
@@ -129,7 +176,10 @@ export const AboutUs = () => {
             />
           </Box>
         </Stack>
-        <Stack direction="row" sx={{ justifyContent: "space-between", gap: 7 }}>
+        <Stack
+          direction={{ md: "row", sm: "column", xs: "row" }}
+          sx={{ justifyContent: "space-between", gap: { sm: 7, xs: 3 } }}
+        >
           <Stack>
             <Box>
               <Typography
@@ -138,6 +188,10 @@ export const AboutUs = () => {
                   fontFamily: '"UoqMunThenKhung", serif',
                   mb: 1,
                   fontWeight: 700,
+                  fontSize: {
+                    sm: "45px",
+                    xs: "35px",
+                  },
                 }}
               >
                 20+
@@ -159,6 +213,10 @@ export const AboutUs = () => {
                   fontFamily: '"UoqMunThenKhung", serif',
                   mb: 1,
                   fontWeight: 700,
+                  fontSize: {
+                    sm: "45px",
+                    xs: "35px",
+                  },
                 }}
               >
                 70,000+
@@ -178,6 +236,10 @@ export const AboutUs = () => {
                   fontFamily: '"UoqMunThenKhung", serif',
                   mb: 1,
                   fontWeight: 700,
+                  fontSize: {
+                    sm: "45px",
+                    xs: "35px",
+                  },
                 }}
               >
                 530,000+
@@ -199,6 +261,10 @@ export const AboutUs = () => {
                   fontFamily: '"UoqMunThenKhung", serif',
                   mb: 1,
                   fontWeight: 700,
+                  fontSize: {
+                    sm: "45px",
+                    xs: "35px",
+                  },
                 }}
               >
                 157
@@ -220,8 +286,14 @@ export const AboutUs = () => {
             backgroundPosition: "center",
             mt: 8,
             position: "relative",
+            height: {
+              xl: "700px",
+              lg: "500px",
+              md: "400px",
+              sm: "300px",
+              xs: "200px",
+            },
           }}
-          height={520}
         >
           <Box
             sx={{
@@ -239,11 +311,15 @@ export const AboutUs = () => {
             }}
           >
             <Typography
-              variant="h2"
               sx={{
                 fontFamily: '"UoqMunThenKhung", serif',
                 mb: 1,
                 fontWeight: 700,
+                fontSize: {
+                  md: "70px",
+                  sm: "40px",
+                  xs: "25px",
+                },
               }}
             >
               We are always ready to
@@ -252,8 +328,16 @@ export const AboutUs = () => {
               variant="h2"
               sx={{
                 fontFamily: '"UoqMunThenKhung", serif',
-                mb: 7,
+                mb: {
+                  md: 7,
+                  xs: 3,
+                },
                 fontWeight: 700,
+                fontSize: {
+                  md: "70px",
+                  sm: "40px",
+                  xs: "30px",
+                },
               }}
             >
               take a perfect shot.
@@ -261,7 +345,12 @@ export const AboutUs = () => {
             <Button
               variant="contained"
               endIcon={<FaRegHandshake style={{ fontSize: "30px" }} />}
-              sx={{ fontSize: 17 }}
+              sx={{
+                fontSize: {
+                  md: 17,
+                  sm: 10,
+                },
+              }}
             >
               {" "}
               hire us now

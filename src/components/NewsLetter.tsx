@@ -16,11 +16,12 @@ export const NewsLetter = () => {
   return (
     <Stack sx={{ paddingBlock: 8, backgroundColor: "background.paper" }}>
       <Stack
-        direction="row"
+        direction={{ md: "row", xs: "column" }}
+        spacing={2}
         sx={{
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
           alignItems: "center",
-          paddingInline: 15,
+          px: 1,
         }}
       >
         <Box>
@@ -31,16 +32,25 @@ export const NewsLetter = () => {
               fontWeight: 500,
               color: "secondary.main",
               alignSelf: "center",
+              fontSize: {
+                sm: 50,
+                xs: 40,
+              },
             }}
           >
             {" "}
             Blog And Article
           </Typography>
+
           <Typography
             variant="h4"
             sx={{
               fontFamily: '"UoqMunThenKhung", serif',
               textTransform: "capitalize",
+              fontSize: {
+                sm: 34,
+                xs: 26,
+              },
             }}
           >
             news and articles from zaph tours
@@ -56,16 +66,23 @@ export const NewsLetter = () => {
           </Button>
         </Stack>
       </Stack>
-      <Stack direction="row" sx={{ gap: 4, justifyContent: "center", mt: 4 }}>
+      <Stack
+        direction="row"
+        sx={{
+          gap: 4,
+          justifyContent: "center",
+          mt: 4,
+          display: "flex",
+          flexWrap: "wrap",
+          px: 1,
+        }}
+      >
         {Articles.map((article, index) => (
-          <Card
-            sx={{ maxWidth: 345, backgroundColor: "#0a0a0ad4" }}
-            key={index}
-          >
+          <Card sx={{ width: 400, backgroundColor: "#0a0a0ad4" }} key={index}>
             <CardMedia
               component="img"
               alt="article image"
-              height="250"
+              height="300"
               image={article.img}
             />
             <CardContent>

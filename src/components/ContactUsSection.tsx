@@ -29,13 +29,23 @@ const ContactUsSection = () => {
           backgroundImage: "url(/images/contactusbg.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          padding: 10,
+          px: { xs: 2, sm: 4, md: 10 },
+          py: { xs: 4, sm: 6, md: 10 },
         }}
       >
         <Typography
           variant="h3"
           fontWeight="bold"
-          sx={{ fontFamily: '"UoqMunThenKhung", serif', mb: 2 }}
+          sx={{
+            fontFamily: '"UoqMunThenKhung", serif',
+            mb: 2,
+            fontSize: {
+              xs: "1.8rem",
+              sm: "2.4rem",
+              md: "3rem",
+            },
+            textAlign: "center",
+          }}
         >
           Contact Us
         </Typography>
@@ -45,12 +55,13 @@ const ContactUsSection = () => {
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             gap: 4,
+            width: "100%",
           }}
         >
           <Paper
             elevation={3}
             sx={{
-              p: 4,
+              p: { xs: 2, sm: 3, md: 4 },
               flex: 1,
               bgcolor: "transparent",
               border: "1px solid rgb(94, 94, 94)",
@@ -129,7 +140,7 @@ const ContactUsSection = () => {
           <Paper
             elevation={3}
             sx={{
-              p: 4,
+              p: { xs: 2, sm: 3, md: 4 },
               flex: 1,
               bgcolor: "transparent",
               border: "1px solid rgb(94, 94, 94)",
@@ -139,19 +150,22 @@ const ContactUsSection = () => {
             <Typography variant="h5" gutterBottom>
               Get In Touch
             </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              {" "}
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
-              quibusdam?
+            <Typography
+              sx={{
+                color: "text.secondary",
+                fontSize: { xs: "0.95rem", sm: "1rem" },
+              }}
+            >
+              For inquiries or assistance, please contact our team. We’re here
+              to help.
             </Typography>
             <Stack sx={{ gap: 1, mt: 1 }}>
-              <Stack direction="row">
+              <Stack direction="row" sx={{ gap: 2, flexWrap: "wrap" }}>
                 <Stack>
                   <IconButton
                     size="large"
                     sx={{ color: "primary.main", fontSize: 25 }}
                   >
-                    {" "}
                     <FaPhoneVolume />
                   </IconButton>
                 </Stack>
@@ -160,13 +174,12 @@ const ContactUsSection = () => {
                   <Typography>+2547 071 3358</Typography>
                 </Stack>
               </Stack>
-              <Stack direction="row">
+              <Stack direction="row" sx={{ gap: 2, flexWrap: "wrap" }}>
                 <Stack>
                   <IconButton
                     size="large"
                     sx={{ color: "primary.main", fontSize: 25 }}
                   >
-                    {" "}
                     <WhatsApp />
                   </IconButton>
                 </Stack>
@@ -175,28 +188,26 @@ const ContactUsSection = () => {
                   <Typography>+2547 071 3358</Typography>
                 </Stack>
               </Stack>
-              <Stack direction="row">
+              <Stack direction="row" sx={{ gap: 2, flexWrap: "wrap" }}>
                 <Stack>
                   <IconButton
                     size="large"
                     sx={{ color: "primary.main", fontSize: 25 }}
                   >
-                    {" "}
                     <IoMail />
                   </IconButton>
                 </Stack>
                 <Stack>
-                  <Typography>mailinfo@dev.com</Typography>
-                  <Typography>devcharles@dev.com</Typography>
+                  <Typography>mailinfo@zaph.com</Typography>
+                  <Typography>zaphtours@zaph.com</Typography>
                 </Stack>
               </Stack>
-              <Stack direction="row">
+              <Stack direction="row" sx={{ gap: 2, flexWrap: "wrap" }}>
                 <Stack>
                   <IconButton
                     size="large"
                     sx={{ color: "primary.main", fontSize: 25 }}
                   >
-                    {" "}
                     <FaLocationDot />
                   </IconButton>
                 </Stack>
@@ -225,7 +236,7 @@ const ContactUsSection = () => {
               </Stack>
             </Box>
 
-            <Box sx={{ mt: 2, display: "flex", gap: 2 }}>
+            <Box sx={{ mt: 2, display: "flex", gap: 2, flexWrap: "wrap" }}>
               <IconButton size="small">
                 <Instagram fontSize="medium" sx={{ color: "primary.main" }} />
               </IconButton>
@@ -247,12 +258,24 @@ const ContactUsSection = () => {
       </Stack>
 
       <Stack
-        sx={{ paddingInline: 19, paddingBlock: 8, bgcolor: "background.paper" }}
+        sx={{
+          px: { xs: 2, sm: 6, md: 19 },
+          py: { xs: 6, md: 8 },
+          bgcolor: "background.paper",
+        }}
       >
         <Typography
           variant="h3"
           gutterBottom
-          sx={{ fontFamily: '"UoqMunThenKhung", serif' }}
+          sx={{
+            fontFamily: '"UoqMunThenKhung", serif',
+            fontSize: {
+              xs: "1.8rem",
+              sm: "2.4rem",
+              md: "3rem",
+            },
+            textAlign: "center",
+          }}
         >
           Our Location
         </Typography>

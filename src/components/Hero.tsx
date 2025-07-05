@@ -1,6 +1,5 @@
 import { Box, Typography, Button, Chip } from "@mui/material";
 import { FaArrowRightLong } from "react-icons/fa6";
-
 import { Navbar } from "./Navbar";
 
 export const Hero = () => {
@@ -12,7 +11,7 @@ export const Hero = () => {
         backgroundPosition: "center",
         minHeight: "100vh",
         position: "relative",
-        px: 4,
+        px: { xs: 2, sm: 3, md: 4 },
         pointerEvents: "none",
       }}
     >
@@ -29,31 +28,22 @@ export const Hero = () => {
           width: "100%",
           height: "100%",
           textAlign: "center",
+          px: 2,
         }}
       >
         <Typography
-          variant="h4"
+          variant="subtitle1"
           sx={{
             fontFamily: '"Marck Script", cursive',
             fontWeight: 500,
             bgcolor: "rgba(0, 0, 0, 0.31)",
-            width: "fit-Content",
-            p: 1,
+            width: "fit-content",
+            px: 2,
+            py: 1,
+            fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
           }}
         >
-          Get unforgetable pleasure with us.
-        </Typography>
-        <Typography
-          variant="h1"
-          sx={{
-            color: "secondary.main",
-            fontFamily: '"Merienda", cursive',
-            fontWeight: 600,
-            mb: 2,
-            pointerEvents: "auto",
-          }}
-        >
-          Crafting Journeys.
+          Get unforgettable pleasure with us.
         </Typography>
         <Typography
           variant="h2"
@@ -61,93 +51,110 @@ export const Hero = () => {
             color: "secondary.main",
             fontFamily: '"Merienda", cursive',
             fontWeight: 600,
+            mb: 1,
+            fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+            pointerEvents: "auto",
+          }}
+        >
+          Crafting Journeys.
+        </Typography>
+        <Typography
+          variant="h3"
+          sx={{
+            color: "secondary.main",
+            fontFamily: '"Merienda", cursive',
+            fontWeight: 600,
+            fontSize: { xs: "1.5rem", sm: "2.5rem", md: "3rem" },
             pointerEvents: "auto",
           }}
         >
           Not Just Trips.
         </Typography>
-        <Box sx={{ display: "flex", gap: 2, mt: 2, pointerEvents: "auto" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            gap: 2,
+            mt: 3,
+            pointerEvents: "auto",
+            alignItems: "center",
+          }}
+        >
           <Button
             variant="contained"
             endIcon={<FaArrowRightLong />}
-            sx={{ paddingInline: 2, fontWeight: 600, fontSize: 18 }}
+            sx={{
+              px: 3,
+              py: 1.5,
+              fontWeight: 600,
+              fontSize: { xs: 14, sm: 16, md: 18 },
+              width: { xs: "100%", sm: "auto" },
+            }}
           >
             explore tours
           </Button>
           <Button
             variant="outlined"
             endIcon={<FaArrowRightLong />}
-            sx={{ paddingInline: 2, fontWeight: 600, fontSize: 18 }}
+            sx={{
+              px: 3,
+              py: 1.5,
+              fontWeight: 600,
+              fontSize: { xs: 14, sm: 16, md: 18 },
+              width: { xs: "100%", sm: "auto" },
+            }}
           >
             our services
           </Button>
         </Box>
       </Box>
+
       <Box
         sx={{
           position: "absolute",
           bottom: 0,
           left: 0,
-          display: "flex",
-          flexDirection: "column",
-          ml: 4,
+          width: "100%",
+          px: { xs: 2, sm: 4 },
+          pb: { xs: 2, sm: 3 },
           pointerEvents: "auto",
         }}
       >
         <Typography
-          variant="h5"
+          variant="h6"
           sx={{
             fontFamily: '"Marck Script", cursive',
             fontWeight: 500,
-            width: "fit-Content",
-            p: 1,
+            mb: 1,
+            fontSize: { xs: "1rem", sm: "1.25rem" },
           }}
         >
-          The facilities we offer :
+          The facilities we offer:
         </Typography>
-        <Box sx={{ p: 1, display: "flex", flexWrap: "wrap", gap: 1, mb: 4 }}>
-          <Chip
-            label="Tour Guide"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
-          <Chip
-            label="Travel Packages"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
-          <Chip
-            label="Accomodation"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
-          <Chip
-            label="Transportation"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
-          <Chip
-            label="Food"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
-          <Chip
-            label="Insurance"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
-          <Chip
-            label="Online Ordering"
-            variant="outlined"
-            color="primary"
-            sx={{ fontWeight: 600 }}
-          />
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 1,
+          }}
+        >
+          {[
+            "Tour Guide",
+            "Travel Packages",
+            "Accommodation",
+            "Transportation",
+            "Food",
+            "Insurance",
+            "Online Ordering",
+          ].map((label) => (
+            <Chip
+              key={label}
+              label={label}
+              variant="outlined"
+              color="primary"
+              sx={{ fontWeight: 600 }}
+            />
+          ))}
         </Box>
       </Box>
     </Box>

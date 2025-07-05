@@ -14,7 +14,7 @@ import testimonialsData from "../data/testimonial";
 
 export const Testimonials = () => {
   return (
-    <Stack sx={{ p: 10 }}>
+    <Stack sx={{ paddingBlock: 8 }}>
       <Typography
         variant="h1"
         sx={{
@@ -22,34 +22,52 @@ export const Testimonials = () => {
           fontWeight: 500,
           color: "secondary.main",
           alignSelf: "center",
+          fontSize: {
+            md: "95px",
+            sm: "80px",
+            xs: "60px",
+          },
         }}
       >
         Testimonials
       </Typography>
       <Stack
-        direction="row"
+        direction={{ md: "row", xs: "column" }}
         sx={{ justifyContent: "space-evenly", marginBlock: 6 }}
       >
-        <Box>
+        <Box sx={{ justifyItems: "center", gap: 2 }}>
           <Typography
             variant="h5"
-            sx={{ textTransform: "uppercase", color: "text.secondary" }}
+            sx={{
+              textTransform: "uppercase",
+              color: "text.secondary",
+              fontSize: { md: 24, xs: 0 },
+            }}
           >
             Testimonials
           </Typography>
+
           <Typography
             variant="h3"
             sx={{
               fontFamily: '"UoqMunThenKhung", serif',
               mb: 2,
               textTransform: "capitalize",
+              fontSize: {
+                sm: "45px",
+                xs: "35px",
+              },
             }}
           >
             What our clients say
           </Typography>
         </Box>
         <Typography
-          sx={{ color: "text.secondary", maxWidth: "50%", textAlign: "center" }}
+          sx={{
+            color: "text.secondary",
+            maxWidth: { md: "50%", xs: "100%" },
+            textAlign: "center",
+          }}
         >
           {" "}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
@@ -63,19 +81,26 @@ export const Testimonials = () => {
       </Stack>
       <Stack
         direction="row"
-        sx={{ flexWrap: "wrap", gap: 2, justifyContent: "center" }}
+        sx={{
+          gap: 4,
+          justifyContent: "center",
+          mt: 4,
+          display: "flex",
+          flexWrap: "wrap",
+          px: 1,
+        }}
       >
         {testimonialsData.map((testimonial, index) => (
-          <CardActionArea sx={{ maxWidth: 400 }}>
-            <Card
-              sx={{
-                maxWidth: 400,
-                bgcolor: "transparent",
-                border: "1px solid rgb(37, 37, 37)",
-                borderRadius: "12px",
-              }}
-              key={index}
-            >
+          <Card
+            sx={{
+              width: 400,
+              bgcolor: "transparent",
+              border: "1px solid rgb(37, 37, 37)",
+              borderRadius: "12px",
+            }}
+            key={index}
+          >
+            <CardActionArea>
               <CardContent>
                 <Box sx={{ display: "flex" }}>
                   <IconButton>
@@ -137,8 +162,8 @@ export const Testimonials = () => {
                   <X sx={{ color: "primary.main" }} />
                 </IconButton>
               </CardActions>
-            </Card>
-          </CardActionArea>
+            </CardActionArea>
+          </Card>
         ))}
       </Stack>
     </Stack>

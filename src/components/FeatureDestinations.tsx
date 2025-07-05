@@ -32,6 +32,11 @@ export const FeaturedDestinations = () => {
             fontWeight: 500,
             color: "secondary.main",
             mb: 2,
+            fontSize: {
+              md: "95px",
+              sm: "80px",
+              xs: "60px",
+            },
           }}
         >
           Featured Destinations
@@ -42,12 +47,16 @@ export const FeaturedDestinations = () => {
             fontFamily: '"UoqMunThenKhung", serif',
             mb: 2,
             textTransform: "capitalize",
+            fontSize: {
+              sm: "45px",
+              xs: "35px",
+            },
           }}
         >
           {" "}
           best places for you.
         </Typography>
-        <Typography sx={{ maxWidth: "70%", mb: 4 }}>
+        <Typography sx={{ maxWidth: "70%", mb: 4, color: "text.secondary" }}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Perspiciatis, aperiam inventore possimus perferendis exercitationem
           quia cumque asperiores consectetur, provident modi accusamus unde?
@@ -71,7 +80,7 @@ export const FeaturedDestinations = () => {
             <Card
               sx={{
                 backgroundColor: "#0a0a0ad4",
-                width: 400,
+                width: { sm: 400, xs: 350 },
                 borderRadius: "10px",
               }}
             >

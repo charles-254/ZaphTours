@@ -8,26 +8,27 @@ export const ContactUsLanding = () => {
         backgroundImage: "url(/images/contactus.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "400px",
+        height: {
+          xs: "320px",
+          sm: "350px",
+          md: "450px",
+        },
         position: "relative",
-        px: 4,
-        pointerEvents: "none",
+        px: { xs: 2, sm: 3, md: 4 },
+        overflow: "hidden",
       }}
     >
-      {" "}
       <Navbar />
+
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
           textAlign: "center",
+          px: 1,
+          mt: { xs: 2, sm: 7, md: 10 },
         }}
       >
         <Typography
@@ -36,21 +37,33 @@ export const ContactUsLanding = () => {
             color: "secondary.main",
             fontFamily: '"Merienda", cursive',
             fontWeight: 600,
-            mb: 2,
-            pointerEvents: "auto",
-            textTransform: "capitalize",
+            mb: 1,
+            fontSize: {
+              xs: "1.4rem",
+              sm: "2.2rem",
+              md: "2.8rem",
+            },
+            maxWidth: "100%",
+            lineHeight: 1.2,
           }}
         >
-          plan you trip with us.
+          Plan your trip with us.
         </Typography>
+
         <Typography
           variant="h4"
           sx={{
             fontFamily: '"Marck Script", cursive',
             fontWeight: 500,
-            p: 1,
-            textTransform: "capitalize",
+            fontSize: {
+              xs: "1rem",
+              sm: "1.5rem",
+              md: "2rem",
+            },
+            px: 2,
+            maxWidth: "100%",
             color: "secondary.primary",
+            lineHeight: 1.3,
           }}
         >
           Let's go together.

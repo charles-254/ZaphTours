@@ -56,23 +56,33 @@ const TripTypesList = () => {
         orientation="horizontal"
         variant="middle"
         flexItem
-        sx={{ border: "1px solid gray", m: 5 }}
+        sx={{ border: "1px solid gray", mx: { xs: 2, sm: 5 }, my: 5 }}
       />
-      <Stack sx={{ alignItems: "center" }}>
+      <Stack sx={{ alignItems: "center", px: 2 }}>
         <Typography
           variant="h2"
           sx={{
             fontFamily: '"UoqMunThenKhung", serif',
+            fontSize: { xs: "1.8rem", sm: "2.4rem", md: "3rem" },
           }}
         >
           Trip Types
         </Typography>
-        <Typography variant="h6" sx={{ color: "text.secondary", m: 2 }}>
+        <Typography
+          variant="h6"
+          sx={{
+            color: "text.secondary",
+            m: 2,
+            textAlign: "center",
+            fontSize: { xs: "0.95rem", sm: "1rem" },
+          }}
+        >
           Check out the different Packages we offer
         </Typography>
       </Stack>
+
       {allTrips.map((trip, index) => (
-        <Box key={index} sx={{ mb: 8 }}>
+        <Box key={index} sx={{ mb: 8, px: { xs: 2, md: 6 } }}>
           <Stack sx={{ alignItems: "center", textAlign: "center" }}>
             <Typography
               variant="h2"
@@ -80,13 +90,20 @@ const TripTypesList = () => {
                 fontFamily: '"Marck Script", cursive',
                 fontWeight: 500,
                 color: "secondary.main",
+                fontSize: { xs: "1.6rem", sm: "2.2rem", md: "2.8rem" },
               }}
             >
               {trip.title}
             </Typography>
             <Typography
               variant="body1"
-              sx={{ mb: 2, maxWidth: 800, color: "text.secondary" }}
+              sx={{
+                mb: 2,
+                maxWidth: 800,
+                color: "text.secondary",
+                px: { xs: 1, sm: 3 },
+                fontSize: { xs: "0.95rem", sm: "1rem" },
+              }}
             >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, in
               quis porro nam quia maxime tempora suscipit ipsum est doloribus
@@ -94,23 +111,30 @@ const TripTypesList = () => {
               vitae quis amet, temporibus odio, officia molestiae delectus
               animi. Assumenda, quae repellat!
             </Typography>
-            <Stack direction="row" sx={{ gap: 2, mb: 6 }}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              sx={{ gap: 2, mb: 6, alignItems: "center" }}
+            >
               <Chip
                 label={`Package Price: $${trip.price}`}
                 variant="outlined"
                 color="primary"
-                sx={{ fontWeight: 600, fontSize: 16, paddingBlock: 1 }}
+                sx={{
+                  fontWeight: 600,
+                  fontSize: { xs: 14, sm: 16 },
+                  py: 1,
+                }}
               />
               <Button
                 variant="outlined"
                 color="secondary"
                 endIcon={<FaGreaterThan style={{ fontSize: "15px" }} />}
               >
-                {" "}
                 View Details
               </Button>
             </Stack>
           </Stack>
+
           <Box
             sx={{
               display: "flex",
@@ -120,15 +144,25 @@ const TripTypesList = () => {
             }}
           >
             {trip.destinations.map((destination, i) => (
-              <Card key={i} sx={{ width: 400, borderRadius: "10px" }}>
+              <Card
+                key={i}
+                sx={{
+                  width: { xs: "100%", sm: 300, md: 350, lg: 400 },
+                  borderRadius: "10px",
+                }}
+              >
                 <CardMedia
                   component="img"
-                  height="300"
+                  height="250"
                   image={destination.image}
                   alt={destination.name}
                 />
                 <CardContent sx={{ bgcolor: "background.default" }}>
-                  <Typography variant="subtitle1" fontWeight="medium">
+                  <Typography
+                    variant="subtitle1"
+                    fontWeight="medium"
+                    sx={{ fontSize: { xs: "1rem", sm: "1.1rem" } }}
+                  >
                     {destination.name}
                   </Typography>
                 </CardContent>
