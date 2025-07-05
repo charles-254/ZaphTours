@@ -66,7 +66,15 @@ export const Footer = () => {
             fullWidth
             label="Enter Email"
             variant="outlined"
-            sx={{ bgcolor: "#1a1a1a", borderRadius: 3 }}
+            sx={{
+              bgcolor: "#1a1a1a",
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "primary.main",
+                  borderRadius: "10px",
+                },
+              },
+            }}
           />
           <Button
             variant="outlined"
