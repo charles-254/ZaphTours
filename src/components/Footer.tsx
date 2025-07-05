@@ -229,8 +229,7 @@ export const Footer = () => {
             sx={{
               width: { xs: 250, sm: 300 },
               height: 260,
-              overflow: "hidden",
-              flexWrap: "wrap",
+              
             }}
           >
             {itemData.map((item, index) => (
