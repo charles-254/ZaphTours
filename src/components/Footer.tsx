@@ -79,7 +79,7 @@ export const Footer = () => {
           <Button
             variant="outlined"
             endIcon={<IoIosSend />}
-            sx={{ fontSize: 15, whiteSpace: "nowrap" }}
+            sx={{ fontSize: 15, whiteSpace: "nowrap",px:6 }}
           >
             Subscribe now
           </Button>
